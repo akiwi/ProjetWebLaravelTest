@@ -1,0 +1,21 @@
+/*
+* installation de Laravel sous windows
+*/
+/* install composer*/
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfd
+
+Parse error: syntax error, unexpected ''544e09ee996cdf60ece3804abc525' (T_ENCAPSED_AND_WHITESPACE) in Command line code on line 1
+
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+php -r "unlink('composer-setup.php');"
+
+/*install Laravel*/
+
+composer global require "laravel/installer"
+
+composer create-project --prefer-dist laravel/laravel mon_du_projet
+
+la commande php artisan serve dans le dossier crée.
